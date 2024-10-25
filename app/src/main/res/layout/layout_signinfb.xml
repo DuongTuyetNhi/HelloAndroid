@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3b5796">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FACEBOOK"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="32dp"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        />
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="12dp"
+        android:layout_margin="20dp"
+        android:hint="Email or Phone"
+        android:textColor="#d6d6d6"
+        />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Password"
+        android:textColor="#d6d6d6"
+        />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:text="LOGIN"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:background="#1c2b49"
+        />
+
+</LinearLayout>
