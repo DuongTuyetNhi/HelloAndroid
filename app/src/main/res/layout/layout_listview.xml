@@ -4,6 +4,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="match_parent"
+        android:hint="Product name"
+        android:layout_height="50dp"></EditText>
+    <EditText
+        android:id="@+id/edt_price"
+        android:layout_width="match_parent"
+        android:hint="Product price"
+        android:layout_height="50dp"></EditText>
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:text="Add"
+        android:layout_height="wrap_content"></Button>
+    <Button
+        android:id="@+id/btn_view"
+        android:layout_width="wrap_content"
+        android:text="View"
+        android:layout_height="wrap_content"></Button>
+
     <Button
         android:layout_width="wrap_content"
         android:text="Refresh"

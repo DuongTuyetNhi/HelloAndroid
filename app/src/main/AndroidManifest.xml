@@ -12,20 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloAndroid"
         tools:targetApi="31">
-        <activity
-            android:name=".ListItemActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.HelloAndroid">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
 <!--        <activity-->
-<!--            android:name=".ListProductActivity"-->
+<!--            android:name=".MainScreenActivity"-->
 <!--            android:exported="true"-->
 <!--            android:label="@string/app_name"-->
 <!--            android:theme="@style/Theme.HelloAndroid">-->
@@ -36,6 +25,18 @@
 <!--            </intent-filter>-->
 <!--        </activity>-->
 <!--        <activity android:name=".ProfileActivity"></activity>-->
+
+        <activity
+            android:name=".ListProductActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.HelloAndroid">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -1,7 +1,9 @@
 package com.example.helloandroid;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -96,6 +98,8 @@ public class MainScreenActivity extends Activity {
 //    }
 
     private EditText txtEmail;
+    SharedPreferences pref;
+    SharedPreferences.Editor editor;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
@@ -103,6 +107,16 @@ public class MainScreenActivity extends Activity {
         setContentView(R.layout.layout_signinfb);
 
         txtEmail = findViewById(R.id.txtEmail);
+
+        pref = getApplicationContext().getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+
+        if(checkLogin()){
+            Intent i = new Intent(MainScreenActivity.this, ProfileActivity.class);
+            i.putExtra("txtEmail", txtEmail.getText().toString());
+            startActivity(i);
+            finish();
+        }
+        //--------------------------
         EditText txtPassword = (EditText) findViewById(R.id.txtPassword);
 
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
@@ -117,12 +131,22 @@ public class MainScreenActivity extends Activity {
 //                } else {
 //                    Toast.makeText(MainScreenActivity.this, "Sai username hoac password", Toast.LENGTH_SHORT).show();
 //                }
+
+                editor = pref.edit();
+                editor.putString("txtEmail", txtEmail.getText().toString());
+                editor.commit();
+
                 Intent intent = new Intent(MainScreenActivity.this, ProfileActivity.class);
                 intent.putExtra("txtEmail", txt_Email);
                 startActivities(new Intent[]{intent});
                 finish();
             }
         });
+    }
+    public boolean checkLogin() {
+        String user = pref.getString("username", "");
+        if (user.equals("")) return false;
+        else return true;
     }
 
     @Override
